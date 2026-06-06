@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Política de Privacidade | Mizga Guincho 24h</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --amarelo: #FFC107;
+    --preto: #0A0A0A;
+    --cinza-escuro: #141414;
+    --cinza: #1E1E1E;
+    --branco: #FFFFFF;
+  }
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Barlow', sans-serif; background: var(--preto); color: #ccc; line-height: 1.75; }
+
+  header {
+    background: var(--cinza-escuro);
+    border-bottom: 3px solid var(--amarelo);
+    padding: 16px 24px;
+    display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  }
+  .logo-area { display: flex; align-items: center; gap: 12px; }
+  .logo-icon {
+    width: 44px; height: 44px; background: var(--amarelo);
+    border-radius: 6px; display: flex; align-items: center; justify-content: center;
+  }
+  .logo-icon svg { width: 26px; height: 26px; fill: var(--preto); }
+  .brand { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 1.35rem; text-transform: uppercase; color: #fff; letter-spacing: 0.04em; }
+  .brand span { color: var(--amarelo); }
+  .sub-brand { font-size: 0.65rem; color: #888; letter-spacing: 0.12em; text-transform: uppercase; }
+  .btn-voltar {
+    font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 0.9rem;
+    text-transform: uppercase; letter-spacing: 0.08em; color: #aaa; text-decoration: none;
+    border: 1px solid rgba(255,255,255,0.15); padding: 8px 16px; border-radius: 4px;
+    transition: color 0.2s, border-color 0.2s; white-space: nowrap;
+  }
+  .btn-voltar:hover { color: #fff; border-color: var(--amarelo); }
+
+  .hero-strip {
+    background: linear-gradient(135deg, #FFB300 0%, #FF8F00 100%);
+    padding: 48px 24px 40px; text-align: center;
+  }
+  .hero-strip h1 {
+    font-family: 'Barlow Condensed', sans-serif; font-weight: 900;
+    font-size: clamp(2rem, 6vw, 3rem); text-transform: uppercase;
+    letter-spacing: 0.04em; color: var(--preto); line-height: 1.1;
+  }
+  .hero-strip p { margin-top: 10px; font-size: 0.9rem; color: rgba(0,0,0,0.55); }
+
+  .container { max-width: 780px; margin: 0 auto; padding: 60px 24px 100px; }
+
+  .intro-box {
+    background: var(--cinza); border-left: 4px solid var(--amarelo);
+    border-radius: 4px; padding: 20px 24px; margin-bottom: 48px;
+    font-size: 0.95rem; color: #bbb;
+  }
+  .intro-box strong { color: #fff; }
+
+  .section { margin-bottom: 44px; }
+  .section h2 {
+    font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 1.3rem;
+    text-transform: uppercase; letter-spacing: 0.07em; color: #fff;
+    margin-bottom: 14px; padding-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,0.08);
+    display: flex; align-items: center; gap: 10px;
+  }
+  .section h2 .num {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 26px; height: 26px; background: var(--amarelo); border-radius: 50%;
+    font-size: 0.75rem; color: var(--preto); font-weight: 900; flex-shrink: 0;
+  }
+  .section p { margin-bottom: 12px; font-size: 0.95rem; }
+  .section ul { list-style: none; padding: 0; margin: 8px 0 12px; }
+  .section ul li {
+    padding: 6px 0 6px 20px; position: relative;
+    font-size: 0.93rem; color: #bbb;
+  }
+  .section ul li::before {
+    content: ''; position: absolute; left: 0; top: 50%; transform: translateY(-50%);
+    width: 6px; height: 6px; background: var(--amarelo); border-radius: 50%;
+  }
+
+  .contact-box {
+    background: var(--cinza-escuro); border: 1px solid rgba(255,255,255,0.08);
+    border-top: 3px solid var(--amarelo); border-radius: 6px;
+    padding: 28px; margin-top: 48px; text-align: center;
+  }
+  .contact-box h3 {
+    font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 1.2rem;
+    text-transform: uppercase; color: #fff; letter-spacing: 0.06em; margin-bottom: 10px;
+  }
+  .contact-box p { font-size: 0.9rem; margin-bottom: 6px; }
+  .contact-box a { color: var(--amarelo); text-decoration: none; }
+  .contact-box a:hover { text-decoration: underline; }
+
+  .sticky-bar {
+    position: fixed; bottom: 0; left: 0; right: 0; z-index: 999;
+    display: flex; background: var(--preto);
+    border-top: 2px solid var(--amarelo);
+    box-shadow: 0 -4px 20px rgba(255,193,7,0.2);
+  }
+  .sticky-bar a {
+    flex: 1; display: flex; align-items: center; justify-content: center;
+    gap: 10px; padding: 15px 10px;
+    font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 1.05rem;
+    letter-spacing: 0.05em; text-transform: uppercase; text-decoration: none; color: #fff;
+    transition: filter 0.2s;
+  }
+  .sticky-bar a:hover { filter: brightness(1.1); }
+  .sticky-bar .btn-wpp { background: #25D366; border-right: 1px solid rgba(255,255,255,0.15); }
+  .sticky-bar .btn-tel { background: #E53935; }
+  .sticky-bar svg { width: 20px; height: 20px; }
+
+  footer {
+    background: #050505; border-top: 1px solid rgba(255,255,255,0.05);
+    padding: 28px 24px 90px; text-align: center; font-size: 0.8rem; color: #555;
+  }
+  footer a { color: #777; text-decoration: none; }
+  footer a:hover { color: var(--amarelo); }
+
+  @media (max-width: 480px) { .btn-voltar { display: none; } }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo-area">
+    <div class="logo-icon">
+      <svg viewBox="0 0 24 24"><path d="M18 18.5c.83 0 1.5-.67 1.5-1.5s-.67-1.5-1.5-1.5-1.5.67-1.5 1.5.67 1.5 1.5 1.5zm1.5-9l-1.68-4H6v4h13.5zm-13 9c.83 0 1.5-.67 1.5-1.5S7.33 15.5 6.5 15.5 5 16.17 5 17s.67 1.5 1.5 1.5zM20 8l2 4v4h-2c0 1.66-1.34 3-3 3s-3-1.34-3-3H10c0 1.66-1.34 3-3 3s-3-1.34-3-3H2V6c0-1.11.89-2 2-2h14l2 4z"/></svg>
+    </div>
+    <div>
+      <div class="brand">Mizga <span>Guincho</span></div>
+      <div class="sub-brand">Auto Socorro 24h · Campo Mourão</div>
+    </div>
+  </div>
+  <a href="index.html" class="btn-voltar">&#8592; Voltar ao site</a>
+</header>
+
+<div class="hero-strip">
+  <h1>Política de Privacidade</h1>
+  <p>Última atualização: junho de 2026</p>
+</div>
+
+<div class="container">
+
+  <div class="intro-box">
+    <strong>Mizga Guincho 24h</strong> — Lucas Mateus Da Silva Mizga, CNPJ 66.323.347/0001-83, com sede em Campo Mourão, Paraná — respeita sua privacidade e está comprometida com a proteção dos seus dados pessoais, em conformidade com a <strong>Lei Geral de Proteção de Dados (Lei nº 13.709/2018 – LGPD)</strong>.
+  </div>
+
+  <div class="section">
+    <h2><span class="num">1</span> Quais dados coletamos</h2>
+    <p>Ao entrar em contato pelo site, WhatsApp ou telefone, podemos coletar:</p>
+    <ul>
+      <li>Nome completo</li>
+      <li>Número de telefone / WhatsApp</li>
+      <li>Localização aproximada (para envio do guincho)</li>
+      <li>Dados do veículo (modelo, placa, se necessário)</li>
+      <li>Mensagens trocadas via WhatsApp ou formulário de contato</li>
+    </ul>
+    <p>Não coletamos dados sensíveis como CPF, dados bancários ou informações de saúde.</p>
+  </div>
+
+  <div class="section">
+    <h2><span class="num">2</span> Como usamos seus dados</h2>
+    <p>Os dados coletados são utilizados exclusivamente para:</p>
+    <ul>
+      <li>Prestar o serviço de guincho / auto socorro solicitado</li>
+      <li>Entrar em contato para confirmar detalhes do atendimento</li>
+      <li>Emitir nota fiscal quando aplicável</li>
+      <li>Melhorar nosso atendimento e comunicação</li>
+    </ul>
+    <p>Não utilizamos seus dados para envio de publicidade não solicitada (spam).</p>
+  </div>
+
+  <div class="section">
+    <h2><span class="num">3</span> Compartilhamento de dados</h2>
+    <p>Seus dados <strong style="color:#fff">não são vendidos</strong> nem compartilhados com terceiros para fins comerciais. Podemos compartilhar somente:</p>
+    <ul>
+      <li>Com autoridades competentes, se exigido por lei ou ordem judicial</li>
+      <li>Com o motorista do guincho responsável pelo seu atendimento</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2><span class="num">4</span> Cookies e rastreamento</h2>
+    <p>Este site pode utilizar ferramentas básicas de análise de tráfego (como Google Analytics e Google Ads) para entender quantas pessoas visitam o site e de onde vieram. Esses dados são anônimos e agregados.</p>
+    <p>Não utilizamos cookies para rastrear você em outros sites.</p>
+  </div>
+
+  <div class="section">
+    <h2><span class="num">5</span> Por quanto tempo guardamos seus dados</h2>
+    <p>Mantemos seus dados pelo tempo necessário para a prestação do serviço e cumprimento de obrigações legais. Após esse período, os dados são descartados de forma segura.</p>
+  </div>
+
+  <div class="section">
+    <h2><span class="num">6</span> Seus direitos (LGPD)</h2>
+    <p>Conforme a Lei Geral de Proteção de Dados, você tem direito a:</p>
+    <ul>
+      <li>Saber quais dados temos sobre você</li>
+      <li>Corrigir dados incorretos ou incompletos</li>
+      <li>Solicitar a exclusão dos seus dados</li>
+      <li>Revogar o consentimento a qualquer momento</li>
+      <li>Solicitar a portabilidade dos dados</li>
+    </ul>
+    <p>Para exercer qualquer um desses direitos, entre em contato pelo WhatsApp ou telefone abaixo.</p>
+  </div>
+
+  <div class="section">
+    <h2><span class="num">7</span> Segurança dos dados</h2>
+    <p>Adotamos medidas razoáveis para proteger suas informações contra acesso não autorizado, perda ou uso indevido. A comunicação via WhatsApp conta com criptografia de ponta a ponta.</p>
+  </div>
+
+  <div class="section">
+    <h2><span class="num">8</span> Alterações nesta política</h2>
+    <p>Esta política pode ser atualizada periodicamente. A data da última revisão estará sempre indicada no topo desta página.</p>
+  </div>
+
+  <div class="contact-box">
+    <h3>Dúvidas sobre sua privacidade?</h3>
+    <p>Entre em contato diretamente com o responsável:</p>
+    <p><strong style="color:#fff">Lucas Mateus Da Silva Mizga</strong></p>
+    <p>Mizga Guincho 24h · Campo Mourão – Paraná</p>
+    <p>CNPJ: 66.323.347/0001-83</p>
+    <br>
+    <p><a href="https://wa.me/5544999259872?text=Ol%C3%A1%2C+tenho+uma+d%C3%BAvida+sobre+a+pol%C3%ADtica+de+privacidade">WhatsApp: (44) 9 9925-9872</a></p>
+    <p><a href="tel:+5544999259872">Telefone: (44) 9 9925-9872</a></p>
+  </div>
+
+</div>
+
+<footer>
+  <p>© 2026 Mizga Guincho 24h · Lucas Mateus Da Silva Mizga · CNPJ: 66.323.347/0001-83</p>
+  <p>Campo Mourão – Paraná · <a href="index.html">Voltar ao site</a></p>
+</footer>
+
+<div class="sticky-bar">
+  <a href="https://wa.me/5544999259872?text=Ol%C3%A1%2C+preciso+de+guincho+agora!" class="btn-wpp">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.122.554 4.118 1.528 5.845L.057 23.028a1 1 0 001.225 1.225l5.183-1.471A11.942 11.942 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.956 9.956 0 01-5.118-1.412l-.366-.218-3.797 1.078 1.078-3.797-.218-.366A9.956 9.956 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+    WhatsApp
+  </a>
+  <a href="tel:+5544999259872" class="btn-tel">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+    Ligar Agora
+  </a>
+</div>
+
+</body>
+</html>
